@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "@fontsource/roboto";
 
 const CustomerList = lazy(() => import("./Components/CustomerList"));
+const AddEditCustomer = lazy(() => import("./Components/AddEditCustomer"));
 
 function App() {
    return (
@@ -17,6 +18,10 @@ function App() {
                <Routes>
                   <Route path="/" element={<CustomerList />} />
                   <Route path="/customer-list" element={<CustomerList />} />
+                  <Route
+                     path="/add-edit-customer"
+                     element={<AddEditCustomer />}
+                  />
                </Routes>
             </Suspense>
          </div>
